@@ -1,10 +1,13 @@
-import Reactm, {useRef} from 'react'
+import Reactm, {useRef, useEffect } from 'react'
 import './Navbar.css'
 import logo from '../../assets/netflix_logo.png'
 import searchIcon from '../../assets/search_icon.svg'
 import bell_icon from '../../assets/bell_icon.svg'
 import profile_img from '../../assets/profile_img.png'
 import caret_img from '../../assets/caret_icon.svg'
+
+
+import { logout } from '../../firebase'
 
 
 const Navbar = () => {
@@ -46,7 +49,7 @@ const Navbar = () => {
         <img src={caret_img} alt=""  />
 
         <div className="dropdown">
-          <p>sign out of netflix</p>
+          <p onClick={()=> {logout()}}>sign out of netflix</p>
         </div>
 
         </div>
